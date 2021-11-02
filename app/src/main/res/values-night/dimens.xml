@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_end">10dp</dimen>
+    <dimen name="marginEnd">10dp</dimen>
+    <dimen name="cornerRadius">0dp</dimen>
+</resources>
