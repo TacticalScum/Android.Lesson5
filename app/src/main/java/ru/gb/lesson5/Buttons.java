@@ -1,4 +1,4 @@
-package ru.gb.lesson4;
+package ru.gb.lesson5;
 
 public class Buttons {
 

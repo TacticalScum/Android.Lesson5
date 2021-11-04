@@ -15,8 +15,11 @@
     <string name="button_6">6</string>
     <string name="button_3">3</string>
     <string name="dotButton">.</string>
-    <string name="eraseButton">⌫</string>
+    <string name="optionButton">⋮</string>
     <string name="minusButton">-</string>
     <string name="plusButton">+</string>
     <string name="equalsButton">=</string>
+    <string name="buttonReturn">Вернуться</string>
+    <string name="textviewLightTheme">Светлая тема</string>
+    <string name="textviewDarkTheme">Тёмная тема</string>
 </resources>

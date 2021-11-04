@@ -1,16 +1,19 @@
-package ru.gb.lesson4;
+package ru.gb.lesson5;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import ru.gb.lesson4.R;
 
+public class MainActivity extends AppCompatActivity {
+    private Profile profile;
     public static final String NUMBER_1 = "NUMBER_1";
     public static final String NUMBER_2 = "NUMBER_2";
     public static final String SYMBOL = "SYMBOL";
@@ -23,14 +26,19 @@ public class MainActivity extends AppCompatActivity {
     String b;
     String c;
     String x;
+    int themeID;
     Buttons buttons = new Buttons();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+        setTheme(loadAppTheme());
         setContentView(R.layout.activity_main);
+
+        profile = new Profile();
 
         num1View = findViewById(R.id.num1View);
         symbolView = findViewById(R.id.symbolView);
@@ -116,6 +124,14 @@ public class MainActivity extends AppCompatActivity {
                 updateResultView();
             }
         });
+
+
+        findViewById(R.id.buttonOption).setOnClickListener(v -> {
+            Intent intent = new Intent(this, MainActivity2.class);
+            startActivity(intent);
+        });
+
+        themeID = profile.getThemeID();
     }
 
     private void buttonsValueSetter(Button button) {
@@ -168,5 +184,14 @@ public class MainActivity extends AppCompatActivity {
         outState.putString(NUMBER_2, b);
         outState.putString(SYMBOL, c);
         outState.putString(RESULT, x);
+    }
+
+
+
+    private int loadAppTheme() {
+        if (themeID == 1) {
+            return R.style.myNightTheme_Lesson4;
+        }
+        return R.style.myTheme_Lesson4;
     }
 }

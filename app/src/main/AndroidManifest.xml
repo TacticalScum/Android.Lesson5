@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/myTheme.Lesson4">
         <activity
-            android:name="ru.gb.lesson4.MainActivity"
+            android:name="ru.gb.lesson5.MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name="ru.gb.lesson5.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

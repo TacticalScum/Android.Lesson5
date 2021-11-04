@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="buttonReturn">Вернуться</string>
+    <string name="textviewLightTheme">Светлая тема</string>
+    <string name="textviewDarkTheme">Тёмная тема</string>
+</resources>
