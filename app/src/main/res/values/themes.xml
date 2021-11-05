@@ -1,19 +1,4 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.Lesson4" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
-    </style>
-
 
     <style name="myTheme.Lesson4" parent="Theme.MaterialComponents">
         <item name="android:background">@color/white</item>
@@ -23,7 +8,6 @@
         <item name="android:editTextBackground">@android:color/transparent</item>
         <item name="android:textColor" tools:ignore="DuplicateDefinition">#FF3949AB</item>
     </style>
-
 
     <style name="buttonColor" parent="Widget.MaterialComponents.Button">
         <item name="android:textColor">#FF3949AB</item>
@@ -49,7 +33,6 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:backgroundTint">#FF9800</item>
     </style>
-
 
     <style name="radioButtonColorNight" parent="Widget.AppCompat.CompoundButton.RadioButton">
         <item name="android:textColor">@color/white</item>

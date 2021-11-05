@@ -11,7 +11,6 @@ import ru.gb.lesson4.R;
 public class MainActivity2 extends AppCompatActivity {
     public static final String PREFERENCES_NAME = "MAIN_ACTIVITY2";
     public static final String THEME_NAME = "THEME_FROM_MAIN_ACTIVITY2";
-    Profile profile;
     public int themeCode;
     public static final int lightTheme = 0;
     public static final int darkTheme = 1;
@@ -22,9 +21,7 @@ public class MainActivity2 extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         setTheme(loadAppTheme());
-
         setContentView(R.layout.activity_main2);
-
 
         findViewById(R.id.radioButtonLightTheme).setOnClickListener(v -> {
             saveTheme(lightTheme);
@@ -37,19 +34,13 @@ public class MainActivity2 extends AppCompatActivity {
         });
 
         findViewById(R.id.buttonSave).setOnClickListener(v -> {
-            Intent intent = new Intent(this, MainActivity.class);
-
-            profile = new Profile();
-            profile.setThemeID(themeCode);
-            startActivity(intent);
+            Intent intent2 = new Intent(this, MainActivity.class);
+            startActivity(intent2);
         });
-
     }
 
     private int loadAppTheme() {
-         themeCode = getSharedPreferences(PREFERENCES_NAME, MODE_PRIVATE).getInt(THEME_NAME, lightTheme);
-
-
+        themeCode = getSharedPreferences(PREFERENCES_NAME, MODE_PRIVATE).getInt(THEME_NAME, lightTheme);
         return styleIdCode(themeCode);
     }
 
@@ -61,7 +52,6 @@ public class MainActivity2 extends AppCompatActivity {
         if (codeStyle == darkTheme) {
             return R.style.myNightTheme_Lesson4;
         }
-        return R.style.MyTheme_Lesson4;
+        return R.style.myTheme_Lesson4;
     }
-
 }
